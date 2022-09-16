@@ -365,8 +365,8 @@ img{
 
 .button{
     display: inline-block;
-    background-color: var(--first-color);
-    color: #fff;
+    background-color:white;
+    color: var(--header-color);
     padding: .5rem 1rem;
     border-radius: .5rem;
     border: none;
@@ -445,6 +445,8 @@ img{
 
 .skills__container{
     row-gap: 0;
+    border: 2px solid whitesmoke;
+    padding: 5rem;
 }
 
 .skills__header{
@@ -630,10 +632,14 @@ img{
     cursor: pointer;
     font-size: var(--smaller-font-size);
 }
+.services__button:hover{
+    background-color: whitesmoke;
+}
 
 .services__button:hover .button__icon{
     transform: translateX(.25rem);
     transition: transform .3s ease;
+    background-color: whitesmoke;
 }
 .services__modal{
     position: fixed;
@@ -724,7 +730,7 @@ img{
 }
 
 .portfolio__title{
-    color: var(--first-color);
+    color: whitesmoke;
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-0-5);
 }
@@ -733,7 +739,9 @@ img{
     color: var(--text-color);
     margin-bottom: var(--mb-0-75);
 }
-
+.portfolio__button{
+    background-color: whitesmoke;
+}
 .portfolio__button:hover .button__icon{
     transform: translateX(.25rem);
     transition: transform .3s ease;
@@ -797,7 +805,7 @@ img{
 }
 
 .contact__content{
-    background: var(--header-color);
+    background: whitesmoke;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     padding: .75rem 1rem .25rem;
@@ -811,7 +819,7 @@ img{
 
 .contact__input{
     width: 100%;
-    background: var(--header-color);
+    background:whitesmoke;
     color: var(--text-color);
     font-family: var(--body-font);
     font-size: var(--small-font-size);
