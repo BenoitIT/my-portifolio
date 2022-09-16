@@ -1,41 +1,41 @@
 // RETRIEVE POSTS
-// Get posts from 
+// Get posts from
 
 let posts;
 
 const displayPosts = () => {
 
-    fetch('https://mybrand-blog-api.herokuapp.com/feed/posts')
+    fetch('https://ehealthbackend-project.herokuapp.com/api/health/blogs')
     .then(res => res.json())
     .then(data => {
       console.log(data);
 
-      posts = data.posts;
+      blogs = data.blogs;
 
-      posts.forEach(post => {
+      blogs.map(blog => {
 
         postElement = `
-       
+
         <div class="blog-card">
-        <input id="post-id" type="hidden" value="${post._id}" />
+        <input id="post-id" type="hidden" value="${blog.id}" />
         <div class="blog-card-banner">
-          <img src="${post.imageUrl}" alt="" width="250" class="blog-banner-img">
+          <img src="${blog.blog_file}" alt="" width="250" class="blog-banner-img">
         </div>
 
         <div class="blog-content-wrapper">
 
-          <button onclick="getId(${post._id})" class="blog-topic text-tiny">other</button>
+          <button onclick="getId(${blog.id})" class="blog-topic text-tiny">other</button>
 
           <h3>
-            <a href="./assets/html/post.html" class="h3" id="post-title">${post.title}</a>
+            <a href="#" class="h3" id="post-title">${blog.title}</a>
           </h3>
 
-          <p class="blog-text"> ${post.content} </p>
+          <p class="blog-text"> ${blog.description} </p>
 
           <div class="wrapper-flex">
             <div class="wrapper">
               <p class="text-sm">
-                <time datetime="2021-09-13">Publish date ${post.createdAt}</time>
+                <time datetime="2021-09-13">Publish date ${blog.description}</time>
               </p>
             </div>
 
@@ -57,10 +57,10 @@ const displayPosts = () => {
        localStorage.setItem('postId', post._id)
      })
       });
-      
+
     })
     .catch(err => console.log(err));
-        
+
 }
 
 displayPosts();

@@ -1,9 +1,9 @@
 // RETRIEVE POST
-// Get post from 
+// Get post from
 
 const viewSinglePost = id => {
 
-  fetch(`https://mybrand-blog-api.herokuapp.com/feed/post/${id}`)
+  fetch(`'https://ehealthbackend-project.herokuapp.com/api/health/blogs'/${id}`)
   .then(res => res.json())
   .then(result => {
       console.log(result);
@@ -11,14 +11,14 @@ const viewSinglePost = id => {
       let post = result.post
 
       let postElement = `
-      
+
         <div class="blog-container">
         <div class="blog-content">
                 <img src="${post.imageUrl}" alt="" >
                 <h2>
                     ${post.title}
                 </h2>
-          
+
                 <p class="blog-body">
                     ${post.content}
                 </p>
@@ -38,14 +38,14 @@ const viewSinglePost = id => {
                     <div class="comment__form">
                         <form id="comment-form">
                         <label for="body" class="comment__label">Your Name</label>
-                        <textarea name="" id="username" cols="0" rows="2" class="comment__input"></textarea>                    
+                        <textarea name="" id="username" cols="0" rows="2" class="comment__input"></textarea>
                         <label for="body" class="comment__label">Your Comment</label>
                         <textarea name="" id="user-comment" cols="0" rows="7" class="comment__input"></textarea>
                         <button type="submit" class="submit__btn" id="post-btn"> <a href="#"> Post comment </a> </button>
                         </form>
                     </div>
                 </div>
-              </div> 
+              </div>
               </div> `;
 
         let blogContainer = document.querySelector('.div-container').innerHTML = postElement;
@@ -93,7 +93,7 @@ const fetchComments = id => {
           let commentsContainer = document.getElementById('comments-container');
           commentsContainer.appendChild(commentCard);
         });
-      
+
       })
       .catch(err => console.log(err));
 }
