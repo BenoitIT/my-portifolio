@@ -978,11 +978,16 @@ img{
     }
 
     .home__blob{
-        width: 180px;
+        width: 170px;
+    }
+    .home__img{
+        order: 1;
+        justify-self: center;
     }
     .home__blob-img{
     box-shadow:0 0 20px #313165;
-    width: 170px;
+    width: 150px;
+    justify-self: center;
     margin-left:-5rem;
     }
     .skills__title{
