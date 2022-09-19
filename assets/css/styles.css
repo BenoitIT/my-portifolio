@@ -1001,6 +1001,9 @@ img{
     .qualification__data{
         gap: .5rem;
     }
+    .home__container{
+        padding-bottom: 5rem;
+    }
 
     .services__container{
         grid-template-columns: max-content;
