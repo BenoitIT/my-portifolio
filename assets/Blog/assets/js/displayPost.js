@@ -53,8 +53,8 @@ const displayPosts = () => {
      document.querySelector('.blog-card-group').appendChild(blogPost);
 
      blogPost.addEventListener('click', e => {
-       console.log(post._id);
-       localStorage.setItem('postId', post._id)
+       console.log(blog.id);
+       localStorage.setItem('blogId', blog.id)
      })
       });
 
