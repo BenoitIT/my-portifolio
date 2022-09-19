@@ -960,7 +960,7 @@ img{
 
 /* MEDIA QUERIES */
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 361px) {
     .container{
         margin: 0 var(--mb-1);
     }
@@ -983,6 +983,7 @@ img{
     .home__img{
         order: 1;
         justify-self: center;
+        width: 170px;
     }
     .home__blob-img{
     box-shadow:0 0 20px #313165;
