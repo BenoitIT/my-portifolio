@@ -973,8 +973,10 @@ img{
     }
 
     .home__content{
-        grid-template-columns: 1fr 5fr 2fr;
+
         text-align: center;
+        display:flex;
+        flex-direction: column;
     }
 
     .home__blob{
