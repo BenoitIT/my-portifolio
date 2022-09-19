@@ -960,14 +960,9 @@ img{
 
 /* MEDIA QUERIES */
 /* For small devices */
-@media screen and (max-width: 353px) {
+@media screen and (max-width: 350px) {
     .container{
         margin: 0 var(--mb-1);
-    }
-    .home__container{
-        gap: 1rem;
-        height: 100vh;
-        padding-bottom: 2rem;
     }
     .nav__menu{
         padding: 2rem .25rem 4rem;
